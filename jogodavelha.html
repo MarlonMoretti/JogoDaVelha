@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Velha com JavaScript</title>
+    
+    <!-- Importando CSS, JS e fontes utilizadas -->
+    <link rel="stylesheet" type="text/css" href="estilo.css" media="screen" />
+    <script type="text/javascript" src="jogodavelha.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100..900&display=swap" rel="stylesheet">
+
+
+<!--
+    JOGO DA VELHA COM JAVASCRIPT, HTML 5 E CSS 3
+    Autor: Marlon Moretti
+    Github: https://github.com/MarlonMoretti
+    Linkedin: https://www.linkedin.com/in/marlon-moretti-8071b818b/
+-->
+
+
+</head>
+<body onload="resetarJogo()">
+
+    <!--Título-->
+    <h1 class="title"><center>Jogo da Velha em JavaScript!</center></h1>
+    <h3 class="title"><center>Criado por <a href="http://github.com/MarlonMoretti" target="_blank">Marlon Moretti</a></center></h3>
+
+    <!--Tabela onde ocorre o jogo da Velha, cada célula é uma caixa que adimite X ou O-->
+    <table id="jogoVelha" class="jogoVelha">
+        <tr id="linha0" class="jogoVelha">
+            <td id="celula0x0" class="jogoVelha" onclick="jogar(0,0)"></td>
+            <td id="celula0x1" class="jogoVelha" onclick="jogar(0,1)"></td>
+            <td id="celula0x2" class="jogoVelha" onclick="jogar(0,2)"></td>
+        </tr>
+        <tr id="linha1" class="jogoVelha">
+            <td id="celula1x0" class="jogoVelha" onclick="jogar(1,0)"></td>
+            <td id="celula1x1" class="jogoVelha" onclick="jogar(1,1)"></td>
+            <td id="celula1x2" class="jogoVelha" onclick="jogar(1,2)"></td>
+        </tr>
+        <tr id="linha2" class="jogoVelha">
+            <td id="celula2x0" class="jogoVelha" onclick="jogar(2,0)"></td>
+            <td id="celula2x1" class="jogoVelha" onclick="jogar(2,1)"></td>
+            <td id="celula2x2" class="jogoVelha" onclick="jogar(2,2)"></td>
+        </tr>
+    </table>
+
+    <!--Botão para resetar o jogo-->
+    <input type="button" value="Resetar Jogo" id="resetGame" class="resetGame" onclick="resetarJogo()">
+    
+    <!--Exibir o vencedor do jogo após finalizar-->
+    <center>
+    <div id="venc">
+    </div>
+    </center>
+</body>
+</html>
